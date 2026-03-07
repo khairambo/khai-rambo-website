@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Khai Rambo — Senior Associate Director at PropNex, Singapore's award-winning real estate expert with 10+ years of experience helping 200+ families.">
+  <meta property="og:title" content="About Khai Rambo | Singapore Real Estate Expert">
+  <title>About | Khai Rambo Real Estate Singapore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Page-specific styles */
+    .bio-intro-band {
+      background: var(--gold);
+      padding: 4px 0;
+    }
+    .principles-band { background: var(--off-white); }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .value-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold-pale);
+    }
+    .value-icon {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin: 0 auto 24px;
+      transition: var(--transition);
+    }
+    .value-card:hover .value-icon {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .value-card h4 { color: var(--navy); margin-bottom: 12px; }
+    .value-card p { color: var(--text-muted); font-size: .9rem; line-height: 1.7; }
+
+    .stats-band {
+      background: var(--navy);
+      padding: 70px 0;
+    }
+    .stats-band-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
+    .stats-band-item {}
+    .stats-band-num {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stats-band-label {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255,255,255,.5);
+    }
+    .stats-band-divider {
+      width: 1px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .quote-block {
+      background: var(--navy-mid);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .quote-block blockquote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      color: var(--white);
+      line-height: 1.5;
+      max-width: 820px;
+      margin: 0 auto;
+      position: relative;
+      padding: 0 40px;
+    }
+    .quote-block blockquote::before {
+      content: '"';
+      position: absolute;
+      top: -40px; left: 0;
+      font-size: 6rem;
+      color: rgba(201,168,76,.2);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .quote-block cite {
+      display: block;
+      margin-top: 24px;
+      font-style: normal;
+      font-size: .85rem;
+      color: var(--gold);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .stats-band-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .stats-band-divider { display: none; }
+    }
+    @media (max-width: 560px) {
+      .stats-band-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-name">Khai Rambo</span>
+          <span class="nav-logo-tag">Senior Associate Director · PropNex</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="tel:6588991000" class="nav-phone">
+            <i class="fa-solid fa-phone"></i> +65 8899 1000
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=6588991000" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="mobile-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="links.html">Links</a>
+    <a href="https://api.whatsapp.com/send?phone=6588991000" target="_blank" style="color:var(--gold);margin-top:16px;font-size:1.2rem;">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+    </a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('images/about-hero.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>About</span>
+        </div>
+        <h1>About Khai Rambo</h1>
+        <p>Senior Associate Director · PropNex Realty · CEA R056070J · Trusted Advisor for Life</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="container">
+      <div class="stats-band-grid">
+        <div class="stats-band-item reveal reveal-delay-1">
+          <div class="stats-band-num" data-count="10" data-suffix="+">10+</div>
+          <div class="stats-band-label">Years in Real Estate</div>
+        </div>
+        <div class="stats-band-item reveal reveal-delay-2">
+          <div class="stats-band-num" data-count="200" data-suffix="+">200+</div>
+          <div class="stats-band-label">Families Helped</div>
+        </div>
+        <div class="stats-band-item reveal reveal-delay-3">
+          <div class="stats-band-num" data-count="5" data-suffix="★">5★</div>
+          <div class="stats-band-label">Client Rating</div>
+        </div>
+        <div class="stats-band-item reveal reveal-delay-4">
+          <div class="stats-band-num">Top 10%</div>
+          <div class="stats-band-label">PropNex Producer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BIO SECTION -->
+  <section class="section-pad bg-white">
+    <div class="container">
+      <div class="about-bio-grid">
+        <!-- Image column -->
+        <div class="about-bio-image reveal-left">
+          <div class="about-bio-img">
+                 src="images/khai-profile.jpg"
+                 alt="Khai Rambo – Senior Associate Director, PropNex" loading="lazy">
+          </div>
+          <div class="about-badges">
+            <div class="about-badge-item">
+              <i class="fa-solid fa-medal"></i>
+              <span>Senior Associate Director, PropNex</span>
+            </div>
+            <div class="about-badge-item">
+              <i class="fa-solid fa-id-card"></i>
+              <span>CEA Registration: R056070J</span>
+            </div>
+            <div class="about-badge-item">
+              <i class="fa-solid fa-trophy"></i>
+              <span>Top 10% Producer Five Consecutive Years</span>
+            </div>
+            <div class="about-badge-item">
+              <i class="fa-solid fa-people-group"></i>
+              <span>Powerful Negotiators Group, PropNex</span>
+            </div>
+            <div class="about-badge-item">
+              <i class="fa-solid fa-star"></i>
+              <span>PropNex 5-Year Ambassador & PWS Advocate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="about-bio-text">
+          <span class="eyebrow reveal">My Story</span>
+          <h2 class="section-title reveal reveal-delay-1">Hi, I Am Khai Rambo.<br>Your Trusted Advisor for Life.</h2>
+
+          <p class="reveal reveal-delay-2">
+            I am a <strong>Senior Associate Director</strong> at <strong>PropNex Realty Pte Ltd</strong> — Singapore's largest real estate agency — with CEA Registration No. R056070J. My journey in property began over a decade ago, preceded by 10 years in the banking and finance industry, which gave me a unique edge in understanding the financial dimensions of every property decision.
+          </p>
+
+          <p class="reveal reveal-delay-3">
+            Coming from a humble background, I understand what it means to want something better for your family. That personal drive has shaped how I approach every client — not as a transaction to close, but as a family whose future I am entrusted to protect and grow. I deeply yearn to help clients — especially those who believe they cannot achieve their goals — discover what is truly possible.
+          </p>
+
+          <p class="reveal reveal-delay-4">
+            In just 3 years, I myself upgraded from HDB and now own two condominium apartments — walking the same path I guide my clients through. This first-hand experience means I understand every anxiety, every question, and every milestone in the upgrading journey from the inside out.
+          </p>
+
+          <p class="reveal reveal-delay-5">
+            Over the years, I have helped more than <strong>200 families</strong> buy, sell, upgrade, and invest across Singapore — from HDB heartland flats to luxury condominiums — consistently achieving outstanding results including record-breaking sale prices and savings my clients never thought possible.
+          </p>
+
+          <div class="about-principles reveal">
+            <h4>My 3 Guiding Principles</h4>
+            <div class="principle-list">
+              <div class="principle-item">
+                <div class="principle-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <div>
+                  <h5>FBA — Focus, Believe and Action</h5>
+                  <p>Every goal begins with unwavering focus, the belief that it is achievable, and decisive action to make it happen. I apply this to every client challenge I take on.</p>
+                </div>
+              </div>
+              <div class="principle-item">
+                <div class="principle-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div>
+                  <h5>LTMA — Less Thinking, More Action</h5>
+                  <p>Overthinking costs opportunities. Armed with thorough research and deep market knowledge, I act decisively and timely on behalf of every client I serve.</p>
+                </div>
+              </div>
+              <div class="principle-item">
+                <div class="principle-icon"><i class="fa-solid fa-gear"></i></div>
+                <div>
+                  <h5>SMRT — Skill Sets, Mind Sets, Rehearsal & Tool Sets</h5>
+                  <p>Continuous learning and preparation is the foundation of exceptional service. I invest in sharpening every dimension of my expertise so my clients benefit from the very best.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary btn-lg mt-32 reveal">
+            <i class="fa-solid fa-calendar-check"></i> Let's Meet Over Coffee
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE BLOCK -->
+  <div class="quote-block">
+    <div class="container">
+      <blockquote class="reveal">
+        "Your Home is more than a Home. It is your greatest financial asset — and with the right guidance, it can be the foundation of the legacy you leave your loved ones."
+        <cite>— Khai Rambo, Senior Associate Director, PropNex</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- VALUES / APPROACH -->
+  <section class="section-pad bg-off-white">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="eyebrow reveal">How I Work</span>
+        <h2 class="section-title reveal reveal-delay-1">My Approach to<br>Every Client</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Three core commitments that underpin every conversation, every consultation, and every deal I handle.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal reveal-delay-1">
+          <div class="value-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h4>Deep Market Knowledge</h4>
+          <p>I read the news, study URA data, monitor HDB policies, and track interest rates every single day. This constant market vigilance means you always get advice grounded in the very latest intelligence — not guesswork.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <div class="value-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+          <h4>Genuine Client Advocacy</h4>
+          <p>I represent your interests — not the deal. My advice focuses on what is genuinely best for your long-term financial wellbeing. I will tell you honestly if the timing is wrong, the price is off, or a plan requires more thought.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <div class="value-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <h4>After-Sales Commitment</h4>
+          <p>My relationship with clients doesn't end at key collection. I become a long-term trusted advisor — checking in on market conditions, planning the next move, and standing by whenever questions or challenges arise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER TIMELINE -->
+  <section class="timeline-section section-pad">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="eyebrow reveal">The Journey</span>
+        <h2 class="section-title light reveal reveal-delay-1">A Track Record Built<br>Year After Year</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-item-content reveal">
+            <div class="timeline-year">Pre-2015</div>
+            <h4>Banking & Finance Foundation</h4>
+            <p>Built a strong financial foundation with 10 years in the banking and finance industry, developing expertise in financial analysis, lending, and client advisory that would later become the bedrock of his real estate approach.</p>
+          </div>
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-item-empty"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-item-empty"></div>
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-item-content reveal">
+            <div class="timeline-year">2015–18</div>
+            <h4>Entering Real Estate</h4>
+            <p>Joined PropNex Realty and quickly made his mark. Developed specialised knowledge of Singapore's HDB market, upgrading strategies, and investment approaches. Built a reputation for transparent, data-driven advice.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-item-content reveal">
+            <div class="timeline-year">2019</div>
+            <h4>First Top 10% Recognition</h4>
+            <p>Achieved Top 10% Producer status at PropNex — the first of five consecutive years. Consistently won monthly awards throughout the year, establishing himself as a rising leader within Singapore's largest real estate agency.</p>
+          </div>
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-item-empty"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-item-empty"></div>
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-item-content reveal">
+            <div class="timeline-year">2020–22</div>
+            <h4>Consistent Excellence & Own Upgrade</h4>
+            <p>Maintained Top 10% Producer status through challenging market conditions. Personally upgraded from HDB to own two condominium apartments, applying the same strategies he recommends to clients. 100+ families helped by end of period.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-item-content reveal">
+            <div class="timeline-year">2023</div>
+            <h4>Top Producer & Team Growth</h4>
+            <p>Achieved Top Producer recognition for all 12 months of 2023 — a career milestone. Became a PropNex 5-Year Ambassador and PWS Advocate. Grew team within the Powerful Negotiators Group, mentoring the next generation of agents.</p>
+          </div>
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-item-empty"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-item-empty"></div>
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-item-content reveal">
+            <div class="timeline-year">2024–Present</div>
+            <h4>Senior Associate Director</h4>
+            <p>Promoted to Senior Associate Director at PropNex. Continued monthly award-winning performance through 2024. Built a comprehensive digital presence and continues to help families achieve their property dreams across Singapore.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS SECTION -->
+  <section class="section-pad bg-off-white">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="eyebrow reveal">Awards & Recognition</span>
+        <h2 class="section-title reveal reveal-delay-1">Recognised. Consistent.<br>Award-Winning.</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Khai has received PropNex monthly awards without interruption since 2019 — a testament to unwavering performance and client commitment.</p>
+      </div>
+      <div class="awards-years" style="margin-top:0;">
+        <div class="award-year-card reveal reveal-delay-1">
+          <div class="year">2024</div>
+          <div class="award-name">Monthly Top Producer</div>
+          <div class="award-detail">Consistent top-ranking, Jan–Oct 2024</div>
+        </div>
+        <div class="award-year-card reveal reveal-delay-2">
+          <div class="year">2023</div>
+          <div class="award-name">Top Producer Award</div>
+          <div class="award-detail">12 consecutive months | Full-year excellence</div>
+        </div>
+        <div class="award-year-card reveal reveal-delay-3">
+          <div class="year">2022</div>
+          <div class="award-name">Top 10% Producer</div>
+          <div class="award-detail">12 consecutive months | Outstanding results</div>
+        </div>
+        <div class="award-year-card reveal reveal-delay-4">
+          <div class="year">2019–21</div>
+          <div class="award-name">Top 10% Producer</div>
+          <div class="award-detail">3-year consecutive streak | Proven track record</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="https://www.khairambo.com/award-winning-agent/" target="_blank" class="btn btn-outline-gold reveal">
+          View Full Awards Gallery <i class="fa-solid fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section-pad bg-white">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="eyebrow reveal">What Clients Say About Me</span>
+        <h2 class="section-title reveal reveal-delay-1">Testimonials</h2>
+        <p class="section-subtitle reveal reveal-delay-2">A selection of heartfelt feedback from clients whose property journeys I was privileged to be part of.</p>
+      </div>
+      <div class="testimonials-track" style="grid-template-columns:repeat(3,1fr);">
+
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>Khai Rambo has been nothing else but a SUPER AGENT! He has so much passion and dedication. He makes us feel exclusive in every conversation, appointment and transaction. We are blessed to have him as our agent!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AT</div>
+            <div>
+              <div class="testimonial-name">Ang Thiang Lye</div>
+              <div class="testimonial-role">Seller</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>Simply the best! Humble, patient and absolute grit. Helped me and my family manage our property portfolio and allowed us to upgrade with ease. Be it rent, buy or sell — Khai Rambo is going to be our go-to guy from now on!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">KA</div>
+            <div>
+              <div class="testimonial-name">Kathy</div>
+              <div class="testimonial-role">Buyer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>Khai Rambo is exemplary, professional and proactive. He has helped my family with two separate purchases, always catering to our requirements in the most proactive manner with the ability to effect the whole purchase process seamlessly.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PS</div>
+            <div>
+              <div class="testimonial-name">Peter Seah</div>
+              <div class="testimonial-role">Buyer</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center mt-48">
+        <a href="https://www.khairambo.com/testimonials/" target="_blank" class="btn btn-outline-gold reveal">
+          Read All Testimonials <i class="fa-solid fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section-pad">
+    <div class="cta-bg"></div>
+    <div class="container">
+      <div class="cta-content">
+        <span class="eyebrow reveal">Let's Connect</span>
+        <h2 class="reveal reveal-delay-1">Ready to Start Your<br>Property Journey?</h2>
+        <p class="reveal reveal-delay-2">Give me one hour. Either you walk away with more knowledge, or you become one of my many successful clients. No obligations — just possibilities.</p>
+        <div class="cta-actions reveal reveal-delay-3">
+          <a href="https://api.whatsapp.com/send?phone=6588991000&text=Hi%20Khai%2C%20I%27d%20like%20to%20arrange%20a%20free%20consultation." target="_blank" class="btn btn-wa btn-lg">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Khai
+          </a>
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-calendar"></i> Book a Meeting
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Khai Rambo</div>
+          <div class="footer-logo-tag">Senior Associate Director · PropNex</div>
+          <p>"Unlock your real estate potential with Khai Rambo – Your trusted advisor for life."</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/khairambo.realestate" target="_blank" class="footer-social"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/khairambo.propnex/" target="_blank" class="footer-social"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://sg.linkedin.com/in/khairambo" target="_blank" class="footer-social"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.tiktok.com/@khairambo" target="_blank" class="footer-social"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/channel/UCHdvta7bM2e9-GXJw6IIIeg" target="_blank" class="footer-social"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/KhaiRambo" target="_blank" class="footer-social"><i class="fa-brands fa-telegram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Khai</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.khairambo.com/testimonials/" target="_blank">Testimonials</a></li>
+            <li><a href="links.html">My Links</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="services.html">HDB Buy & Sell</a></li>
+            <li><a href="services.html">Private Property</a></li>
+            <li><a href="services.html">Property Investment</a></li>
+            <li><a href="services.html">HDB Upgrading</a></li>
+            <li><a href="services.html">Rental Services</a></li>
+            <li><a href="services.html">Financial Strategies</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Get In Touch</h5>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:6588991000">+65 8899 1000</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:khairambo@propnex.com">khairambo@propnex.com</a></div>
+          <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=6588991000" target="_blank">WhatsApp Me</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>480 Lorong 6 Toa Payoh, #10-01 HDB Hub East Wing, Singapore 310480</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Khai Rambo. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a></p>
+        <div class="rea-badge"><strong>CEA Reg No:</strong> R056070J | PropNex Realty Pte Ltd | CEA Licence: L3008022J</div>
+      </div>
+    </div>
+    <div class="disclaimer-bar">
+      This advertisement has not been reviewed by the Council for Estate Agencies (CEA). Khai Rambo (R056070J) is a licensed real estate salesperson registered with PropNex Realty Pte Ltd (L3008022J).
+    </div>
+  </footer>
+
+  <!-- WhatsApp Form Widget -->
+  <div id="waWidget" class="wa-widget">
+    <button class="wa-widget-btn" id="waWidgetBtn" aria-label="Open WhatsApp Form">
+      <i class="fa-brands fa-whatsapp wa-icon-open"></i>
+      <i class="fa-solid fa-xmark wa-icon-close"></i>
+    </button>
+    <div class="wa-widget-panel" id="waWidgetPanel">
+      <div class="wa-widget-header">
+        <div class="wa-widget-header-left">
+          <div class="wa-widget-avatar">
+            <img src="images/khai-profile.jpg" alt="Khai Rambo" loading="lazy">
+            <span class="wa-online-dot"></span>
+          </div>
+          <div>
+            <div class="wa-widget-name">Khai Rambo</div>
+            <div class="wa-widget-role">Senior Associate Director · PropNex</div>
+          </div>
+        </div>
+        <i class="fa-brands fa-whatsapp wa-widget-header-icon"></i>
+      </div>
+      <div class="wa-widget-body">
+        <p class="wa-widget-intro">Hi! Fill in the form below and I'll personally get back to you on WhatsApp.</p>
+        <form id="waForm" novalidate>
+          <div class="wa-form-group">
+            <label for="waName">Name <span class="wa-req">*</span></label>
+            <input type="text" id="waName" placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="wa-form-group">
+            <label for="waEmail">Email <span class="wa-req">*</span></label>
+            <input type="email" id="waEmail" placeholder="your@email.com" autocomplete="email">
+          </div>
+          <div class="wa-form-group">
+            <label for="waInquiry">Inquiry Type <span class="wa-req">*</span></label>
+            <select id="waInquiry">
+              <option value="" disabled selected>Select inquiry type</option>
+              <option>Buying (HDB)</option>
+              <option>Selling (HDB)</option>
+              <option>Buying (Private / Condo)</option>
+              <option>Selling (Private)</option>
+              <option>HDB Upgrading</option>
+              <option>Property Investment</option>
+              <option>Rental Services</option>
+              <option>Financial Planning</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="wa-form-group">
+            <label for="waMobile">Mobile Number <span class="wa-optional">(Optional)</span></label>
+            <div class="wa-phone-wrap">
+              <span class="wa-phone-prefix">+65</span>
+              <input type="tel" id="waMobile" placeholder="XXXX XXXX" autocomplete="tel">
+            </div>
+          </div>
+          <div class="wa-form-group">
+            <label for="waSubject">Subject <span class="wa-optional">(Optional)</span></label>
+            <input type="text" id="waSubject" placeholder="e.g. Property Enquiry">
+          </div>
+          <div class="wa-form-group">
+            <label for="waMessage">Message <span class="wa-req">*</span></label>
+            <textarea id="waMessage" rows="3" placeholder="How can we help you?"></textarea>
+          </div>
+          <div class="wa-form-group">
+            <label>Attach Document <span class="wa-optional">(Optional)</span></label>
+            <label for="waFile" class="wa-file-label">
+              <i class="fa-solid fa-paperclip"></i> Click to upload (Max 5MB)
+            </label>
+            <input type="file" id="waFile" class="wa-file-input" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+            <span class="wa-file-name" id="waFileName"></span>
+          </div>
+          <button type="submit" class="wa-submit-btn">
+            <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+          </button>
+          <div class="wa-error-msg" id="waError"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All links for Khai Rambo — Singapore's award-winning real estate agent, Senior Associate Director at PropNex Realty.">
+  <meta property="og:title" content="Khai Rambo | My Links">
+  <meta property="og:description" content="Real estate services, property listings, social media and more.">
+  <meta property="og:image" content="images/khai-profile.jpg">
+  <title>My Links | Khai Rambo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --navy:       #0d1b2a;
+      --navy-deep:  #06101a;
+      --gold:       #c9a84c;
+      --gold-light: #e5c97a;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--navy-deep);
+      min-height: 100vh;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; }
+
+    /* ═══════════════════════════════════
+       ANIMATED BACKGROUND
+    ═══════════════════════════════════ */
+    .lt-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .lt-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 55% at 15% 8%,  rgba(201,168,76,.07) 0%, transparent 55%),
+        radial-gradient(ellipse 55% 40% at 85% 92%, rgba(201,168,76,.05) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 30% at 50% 50%, rgba(13,27,42,.60)   0%, transparent 70%);
+    }
+    /* Floating light particles */
+    .lt-particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0;
+      animation: lt-rise linear infinite;
+    }
+    @keyframes lt-rise {
+      0%   { opacity: 0;   transform: translateY(0)   translateX(0); }
+      15%  { opacity: .55; }
+      85%  { opacity: .25; }
+      100% { opacity: 0;   transform: translateY(-70vh) translateX(15px); }
+    }
+
+    /* ═══════════════════════════════════
+       STICKY BACK BAR
+    ═══════════════════════════════════ */
+    .lt-back-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 20px;
+      background: rgba(6,16,26,.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .lt-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: .78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.5);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+    .lt-back-link:hover { color: var(--gold); }
+    .lt-back-bar-logo {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: .03em;
+    }
+    .lt-updated-badge {
+      font-size: .68rem;
+      color: rgba(255,255,255,.3);
+      letter-spacing: .08em;
+    }
+
+    /* ═══════════════════════════════════
+       WRAPPER
+    ═══════════════════════════════════ */
+    .lt-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 490px;
+      margin: 0 auto;
+      padding: 44px 20px 100px;
+    }
+
+    /* ═══════════════════════════════════
+       PROFILE
+    ═══════════════════════════════════ */
+    .lt-profile {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .lt-avatar-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 22px;
+    }
+    .lt-avatar {
+      width: 114px;
+      height: 114px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 3px solid var(--gold);
+      box-shadow:
+        0 0 0 6px rgba(201,168,76,.12),
+        0 0 0 12px rgba(201,168,76,.05),
+        0 12px 40px rgba(0,0,0,.6);
+      display: block;
+    }
+    /* Animated gold ring */
+    .lt-avatar-ring {
+      position: absolute;
+      inset: -9px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(201,168,76,.3);
+      animation: ring-spin 12s linear infinite;
+    }
+    .lt-avatar-ring::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+    }
+    @keyframes ring-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    /* Online indicator */
+    .lt-online-dot {
+      position: absolute;
+      bottom: 7px;
+      right: 7px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #25D366;
+      border: 2.5px solid var(--navy-deep);
+      z-index: 2;
+    }
+    .lt-online-dot::before {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: rgba(37,211,102,.35);
+      animation: lt-pulse 2.2s ease-in-out infinite;
+    }
+    @keyframes lt-pulse {
+      0%, 100% { transform: scale(1);   opacity: 1;  }
+      50%       { transform: scale(1.7); opacity: 0;  }
+    }
+
+    .lt-name {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .lt-role {
+      font-size: .8rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 16px;
+    }
+    .lt-badges {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .lt-badge {
+      padding: 4px 11px;
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: 50px;
+      font-size: .67rem;
+      color: rgba(255,255,255,.55);
+      letter-spacing: .05em;
+    }
+    .lt-tagline {
+      font-style: italic;
+      font-size: .88rem;
+      color: rgba(255,255,255,.45);
+      line-height: 1.65;
+      padding: 0 10px;
+      position: relative;
+    }
+    .lt-tagline::before { content: '"'; margin-right: 2px; color: var(--gold); }
+    .lt-tagline::after  { content: '"'; margin-left: 2px;  color: var(--gold); }
+
+    /* ═══════════════════════════════════
+       PRIMARY CTA BUTTONS
+    ═══════════════════════════════════ */
+    .lt-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .lt-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      transition: transform .2s, box-shadow .2s, opacity .2s;
+    }
+    .lt-cta:hover { transform: translateY(-2px); opacity: .92; }
+    .lt-cta i { font-size: 1.1rem; }
+    .lt-cta-wa   { background: #25D366; color: #fff; box-shadow: 0 4px 22px rgba(37,211,102,.38); }
+    .lt-cta-wa:hover { box-shadow: 0 8px 32px rgba(37,211,102,.52); }
+    .lt-cta-call { background: var(--gold); color: var(--navy); box-shadow: 0 4px 22px rgba(201,168,76,.32); }
+    .lt-cta-call:hover { box-shadow: 0 8px 32px rgba(201,168,76,.48); }
+    .lt-cta-email {
+      background: transparent;
+      color: rgba(255,255,255,.75);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+    .lt-cta-email:hover { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.3); }
+
+    /* ═══════════════════════════════════
+       SOCIAL ICONS
+    ═══════════════════════════════════ */
+    .lt-socials {
+      display: flex;
+      justify-content: center;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .lt-social {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,.55);
+      font-size: 1rem;
+      transition: all .22s;
+    }
+    .lt-social:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--navy);
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(201,168,76,.35);
+    }
+    .lt-social-label {
+      font-size: .6rem;
+      text-align: center;
+      color: rgba(255,255,255,.3);
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .lt-social-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ═══════════════════════════════════
+       SECTIONS
+    ═══════════════════════════════════ */
+    .lt-section { margin-bottom: 30px; }
+    .lt-section-title {
+      font-size: .67rem;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .lt-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(201,168,76,.3), transparent);
+    }
+    .lt-section-title i { font-size: .8rem; }
+
+    /* ═══════════════════════════════════
+       LINK BUTTONS
+    ═══════════════════════════════════ */
+    .lt-links { display: flex; flex-direction: column; gap: 8px; }
+    .lt-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 15px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-left: 3px solid rgba(201,168,76,.3);
+      border-radius: 12px;
+      color: #fff;
+      transition: all .22s;
+    }
+    .lt-link:hover {
+      background: rgba(201,168,76,.07);
+      border-left-color: var(--gold);
+      border-color: rgba(201,168,76,.2);
+      transform: translateX(5px);
+    }
+    .lt-link-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: rgba(201,168,76,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: .9rem;
+      flex-shrink: 0;
+      transition: all .22s;
+    }
+    .lt-link:hover .lt-link-icon {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .lt-link-label {
+      flex: 1;
+      font-size: .78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.82);
+    }
+    .lt-link-arrow {
+      font-size: .72rem;
+      color: rgba(255,255,255,.22);
+      transition: transform .2s, color .2s;
+      flex-shrink: 0;
+    }
+    .lt-link:hover .lt-link-arrow { transform: translateX(4px); color: var(--gold); }
+
+    /* ═══════════════════════════════════
+       BACK HOME  &  DISCLAIMER
+    ═══════════════════════════════════ */
+    .lt-home-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border: 1px solid rgba(201,168,76,.3);
+      border-radius: 50px;
+      color: var(--gold);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin: 40px 0 28px;
+      transition: all .22s;
+    }
+    .lt-home-btn:hover {
+      background: rgba(201,168,76,.08);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .lt-disclaimer {
+      text-align: center;
+      font-size: .66rem;
+      color: rgba(255,255,255,.22);
+      line-height: 1.7;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    /* ═══════════════════════════════════
+       WHATSAPP FORM WIDGET (shared)
+    ═══════════════════════════════════ */
+    @keyframes lt-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+    @keyframes lt-wa-pulse { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)} 70%{box-shadow:0 0 0 12px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
+    .wa-widget { position:fixed; bottom:32px; right:32px; z-index:9000; display:flex; flex-direction:column; align-items:flex-end; }
+    .wa-widget-btn { width:62px; height:62px; border-radius:50%; background:#25D366; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.6rem; box-shadow:0 4px 20px rgba(37,211,102,.45); transition:background .25s,transform .25s; animation:lt-float 3s ease-in-out infinite,lt-wa-pulse 2.5s ease-in-out infinite; flex-shrink:0; }
+    .wa-widget-btn:hover { background:#1fba57; transform:scale(1.08); animation:none; box-shadow:0 8px 28px rgba(37,211,102,.6); }
+    .wa-icon-close { display:none; }
+    .wa-widget.open .wa-icon-open { display:none; }
+    .wa-widget.open .wa-icon-close { display:block; }
+    .wa-widget.open .wa-widget-btn { background:var(--navy); animation:none; box-shadow:0 4px 16px rgba(0,0,0,.3); }
+    .wa-widget-panel { position:absolute; bottom:76px; right:0; width:360px; background:#fff; border-radius:18px; box-shadow:0 12px 48px rgba(0,0,0,.18),0 2px 8px rgba(0,0,0,.08); overflow:hidden; opacity:0; transform:translateY(16px) scale(.97); pointer-events:none; transition:opacity .28s ease,transform .28s ease; transform-origin:bottom right; }
+    .wa-widget.open .wa-widget-panel { opacity:1; transform:translateY(0) scale(1); pointer-events:all; }
+    .wa-widget-header { background:linear-gradient(135deg,#25D366,#1aad54); padding:18px 20px; display:flex; align-items:center; justify-content:space-between; }
+    .wa-widget-header-left { display:flex; align-items:center; gap:13px; }
+    .wa-widget-avatar { position:relative; width:46px; height:46px; border-radius:50%; overflow:hidden; border:2px solid rgba(255,255,255,.7); flex-shrink:0; }
+    .wa-widget-avatar img { width:100%; height:100%; object-fit:cover; object-position:top center; }
+    .wa-online-dot { position:absolute; bottom:1px; right:1px; width:11px; height:11px; border-radius:50%; background:#fff; border:2px solid #25D366; }
+    .wa-widget-name { color:#fff; font-weight:700; font-size:.92rem; line-height:1.2; }
+    .wa-widget-role { color:rgba(255,255,255,.8); font-size:.72rem; margin-top:1px; }
+    .wa-widget-header-icon { color:rgba(255,255,255,.55); font-size:1.7rem; }
+    .wa-widget-body { padding:18px 20px 20px; max-height:500px; overflow-y:auto; overscroll-behavior:contain; font-family:var(--font-sans); }
+    .wa-widget-body::-webkit-scrollbar { width:4px; } .wa-widget-body::-webkit-scrollbar-thumb { background:#ddd; border-radius:4px; }
+    .wa-widget-intro { font-size:.82rem; color:#666; margin-bottom:16px; line-height:1.6; padding:10px 12px; background:#f0fdf4; border-left:3px solid #25D366; border-radius:0 6px 6px 0; }
+    .wa-form-group { margin-bottom:11px; }
+    .wa-form-group>label { display:block; font-size:.75rem; font-weight:600; color:#333; margin-bottom:5px; letter-spacing:.02em; }
+    .wa-req { color:#e53e3e; } .wa-optional { color:#999; font-weight:400; }
+    .wa-form-group input,.wa-form-group select,.wa-form-group textarea { width:100%; padding:8px 11px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:.83rem; font-family:var(--font-sans); color:#222; background:#fafafa; transition:border-color .2s,background .2s; box-sizing:border-box; }
+    .wa-form-group input:focus,.wa-form-group select:focus,.wa-form-group textarea:focus { outline:none; border-color:#25D366; background:#fff; }
+    .wa-form-group textarea { resize:vertical; min-height:68px; line-height:1.5; }
+    .wa-phone-wrap { display:flex; border:1.5px solid #e2e8f0; border-radius:8px; overflow:hidden; background:#fafafa; transition:border-color .2s; }
+    .wa-phone-wrap:focus-within { border-color:#25D366; }
+    .wa-phone-prefix { padding:8px 10px; font-size:.83rem; font-weight:600; color:#555; background:#edf2f7; border-right:1.5px solid #e2e8f0; white-space:nowrap; display:flex; align-items:center; }
+    .wa-phone-wrap input { border:none; border-radius:0; background:transparent; flex:1; min-width:0; }
+    .wa-phone-wrap input:focus { background:transparent; }
+    .wa-file-label { display:flex; align-items:center; justify-content:center; gap:8px; border:1.5px dashed #cbd5e0; border-radius:8px; padding:10px; text-align:center; font-size:.8rem; color:#718096; cursor:pointer; transition:border-color .2s,color .2s; }
+    .wa-file-label:hover { border-color:#25D366; color:#25D366; }
+    .wa-file-input { display:none; }
+    .wa-file-name { display:block; font-size:.75rem; color:#25D366; margin-top:5px; font-weight:600; }
+    .wa-submit-btn { width:100%; background:#25D366; color:#fff; border:none; border-radius:8px; padding:12px 16px; font-size:.88rem; font-weight:700; font-family:var(--font-sans); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; transition:background .2s,transform .15s; margin-top:6px; }
+    .wa-submit-btn:hover { background:#1aad54; transform:translateY(-1px); }
+    .wa-error-msg { display:none; font-size:.78rem; color:#e53e3e; margin-top:8px; text-align:center; background:#fff5f5; border:1px solid #fed7d7; border-radius:6px; padding:7px 10px; }
+    @media (max-width:480px) { .wa-widget { bottom:20px; right:16px; } .wa-widget-panel { width:calc(100vw - 32px); right:-16px; } }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient particles background -->
+  <div class="lt-bg">
+    <div class="lt-particle" style="left:8%;  animation-duration:12s; animation-delay:0s;   width:3px; height:3px;"></div>
+    <div class="lt-particle" style="left:22%; animation-duration:17s; animation-delay:3s;"></div>
+    <div class="lt-particle" style="left:37%; animation-duration:14s; animation-delay:6s;   width:3px; height:3px;"></div>
+    <div class="lt-particle" style="left:53%; animation-duration:19s; animation-delay:1s;"></div>
+    <div class="lt-particle" style="left:65%; animation-duration:11s; animation-delay:8s;   width:3px; height:3px;"></div>
+    <div class="lt-particle" style="left:76%; animation-duration:16s; animation-delay:4s;"></div>
+    <div class="lt-particle" style="left:88%; animation-duration:13s; animation-delay:7s;   width:3px; height:3px;"></div>
+    <div class="lt-particle" style="left:14%; animation-duration:20s; animation-delay:10s;"></div>
+    <div class="lt-particle" style="left:45%; animation-duration:15s; animation-delay:2s;   width:3px; height:3px;"></div>
+    <div class="lt-particle" style="left:92%; animation-duration:18s; animation-delay:9s;"></div>
+    <div class="lt-particle" style="left:30%; animation-duration:22s; animation-delay:5s;   width:2px; height:2px;"></div>
+    <div class="lt-particle" style="left:70%; animation-duration:10s; animation-delay:11s;  width:2px; height:2px;"></div>
+  </div>
+
+  <!-- ── Sticky top bar ── -->
+  <div class="lt-back-bar">
+    <a href="index.html" class="lt-back-link">
+      <i class="fa-solid fa-arrow-left"></i> Back to Website
+    </a>
+    <div class="lt-back-bar-logo">Khai Rambo</div>
+    <div class="lt-updated-badge">Updated Mar 2026</div>
+  </div>
+
+  <!-- ── Main content ── -->
+  <div class="lt-wrap">
+
+    <!-- PROFILE -->
+    <div class="lt-profile">
+      <div class="lt-avatar-wrap">
+        <div class="lt-avatar-ring"></div>
+        <img class="lt-avatar"
+             src="images/khai-profile.jpg">
+        <span class="lt-online-dot"></span>
+      </div>
+      <div class="lt-name">Khai Rambo</div>
+      <div class="lt-role">Senior Associate Director · PropNex Realty</div>
+      <div class="lt-badges">
+        <span class="lt-badge">CEA R056070J</span>
+        <span class="lt-badge">Top 10% Producer</span>
+        <span class="lt-badge">5-Year Ambassador</span>
+        <span class="lt-badge">200+ Families</span>
+      </div>
+      <p class="lt-tagline">Unlock your real estate potential with Khai Rambo – Your trusted advisor for life</p>
+    </div>
+
+    <!-- PRIMARY CTA BUTTONS -->
+    <div class="lt-cta-group">
+      <a href="https://api.whatsapp.com/send?phone=6588991000&text=Hi%20Khai%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="lt-cta lt-cta-wa">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp Khai Now
+      </a>
+      <a href="tel:6588991000" class="lt-cta lt-cta-call">
+        <i class="fa-solid fa-phone"></i> Call Now +65 8899 1000
+      </a>
+      <a href="mailto:khairambo@propnex.com" class="lt-cta lt-cta-email">
+        <i class="fa-solid fa-envelope"></i> khairambo@propnex.com
+      </a>
+    </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="lt-socials">
+      <div class="lt-social-item">
+        <a href="https://www.facebook.com/khairambo.realestate" target="_blank" class="lt-social" title="Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+        <div class="lt-social-label">FB Page</div>
+      </div>
+      <div class="lt-social-item">
+        <a href="https://www.instagram.com/khairambo.propnex/" target="_blank" class="lt-social" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <div class="lt-social-label">Instagram</div>
+      </div>
+      <div class="lt-social-item">
+        <a href="https://sg.linkedin.com/in/khairambo" target="_blank" class="lt-social" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <div class="lt-social-label">LinkedIn</div>
+      </div>
+      <div class="lt-social-item">
+        <a href="https://www.tiktok.com/@khairambo" target="_blank" class="lt-social" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <div class="lt-social-label">TikTok</div>
+      </div>
+      <div class="lt-social-item">
+        <a href="https://www.youtube.com/channel/UCHdvta7bM2e9-GXJw6IIIeg" target="_blank" class="lt-social" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <div class="lt-social-label">YouTube</div>
+      </div>
+      <div class="lt-social-item">
+        <a href="https://t.me/KhaiRambo" target="_blank" class="lt-social" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <div class="lt-social-label">Telegram</div>
+      </div>
+      <div class="lt-social-item">
+        <a href="https://twitter.com/mdkhai25" target="_blank" class="lt-social" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+        <div class="lt-social-label">Twitter</div>
+      </div>
+      <div class="lt-social-item">
+        <a href="https://www.snapchat.com/add/khairambo" target="_blank" class="lt-social" title="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
+        <div class="lt-social-label">Snapchat</div>
+      </div>
+      <div class="lt-social-item">
+        <a href="https://www.facebook.com/mdkhai" target="_blank" class="lt-social" title="Personal Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <div class="lt-social-label">Facebook</div>
+      </div>
+    </div>
+
+    <!-- ─── SECTION: MY WEBSITE PAGES ─── -->
+    <div class="lt-section">
+      <div class="lt-section-title"><i class="fa-solid fa-house"></i> This Website</div>
+      <div class="lt-links">
+        <a href="index.html" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-house"></i></div>
+          <span class="lt-link-label">Homepage</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="services.html" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <span class="lt-link-label">My Services</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="about.html" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <span class="lt-link-label">About Khai Rambo</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="contact.html" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <span class="lt-link-label">Contact Us / Book Appointment</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ─── SECTION: REAL ESTATE SERVICES ─── -->
+    <div class="lt-section">
+      <div class="lt-section-title"><i class="fa-solid fa-building"></i> Real Estate Services</div>
+      <div class="lt-links">
+        <a href="https://www.khairambo.com/join-team-rambo/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-people-group"></i></div>
+          <span class="lt-link-label">Join My Team</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://myservice.khairambo.com/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+          <span class="lt-link-label">About My Services</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://myservice.khairambo.com/#contact" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-book-open"></i></div>
+          <span class="lt-link-label">Download My Ebook</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://profile.propnex.com/R056070J" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-id-card"></i></div>
+          <span class="lt-link-label">My Digital PropNex Profile</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://www.khairambo.com/testimonials/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-star"></i></div>
+          <span class="lt-link-label">Client Testimonials</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://www.khairambo.com/award-winning-agent/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-trophy"></i></div>
+          <span class="lt-link-label">My Award Wins</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://www.khairambo.com/property-tips" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <span class="lt-link-label">Singapore Property Tips</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://www.khairambo.com/financial-strategies/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <span class="lt-link-label">Financial Strategies</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://propnex.khairambo.com/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <span class="lt-link-label">Consumer Seminars</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://vr360.khairambo.com/wp-includes/index.php/index.html" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+          <span class="lt-link-label">Virtual Tours (360°)</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://wa.me/c/6588991000" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-book"></i></div>
+          <span class="lt-link-label">My Catalogue</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://www.rambo-sg.com/view-showflat/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <span class="lt-link-label">Book an Appointment</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ─── SECTION: PROPERTY LISTINGS ─── -->
+    <div class="lt-section">
+      <div class="lt-section-title"><i class="fa-solid fa-key"></i> Property Listings</div>
+      <div class="lt-links">
+        <a href="https://residenceshowflat.com/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-building-flag"></i></div>
+          <span class="lt-link-label">All New Launch Projects</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://residenceshowflat.com/links" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-house-chimney"></i></div>
+          <span class="lt-link-label">Residence Showflat Links</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="http://www.projectsale.com.sg/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-building"></i></div>
+          <span class="lt-link-label">PropNex Sales Website</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://sengkangtopunggol.com/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <span class="lt-link-label">Sengkang &amp; Punggol Sales</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://www.simply5.sg/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-star-half-stroke"></i></div>
+          <span class="lt-link-label">Simply Five Team</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://freehold.residenceshowflat.com/wp-includes/index.php/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <span class="lt-link-label">Freehold vs Leasehold (CCR)</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://penthouses.residenceshowflat.com/wp-includes/index.php/index.html" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-crown"></i></div>
+          <span class="lt-link-label">Best Selected Penthouses</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://fourbedrooms.residenceshowflat.com/wp-includes/index.php/index.html" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-bed"></i></div>
+          <span class="lt-link-label">Best 4-Bedroom Units</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://threebedrooms.residenceshowflat.com/wp-includes/index.php/index.html" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-bed"></i></div>
+          <span class="lt-link-label">Best 3-Bedroom Units</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://twobedrooms.residenceshowflat.com/wp-includes/index.php/index.html" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-bed"></i></div>
+          <span class="lt-link-label">Best 2-Bedroom Units</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://onebedroom.residenceshowflat.com/wp-includes/index.php/index.html.html" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-bed"></i></div>
+          <span class="lt-link-label">Best 1-Bedroom Units</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://commercials.residenceshowflat.com/wp-includes/index.php/index.html" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-shop"></i></div>
+          <span class="lt-link-label">Best Commercial Units</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ─── SECTION: CONTENT & MEDIA ─── -->
+    <div class="lt-section">
+      <div class="lt-section-title"><i class="fa-solid fa-microphone"></i> Content &amp; Media</div>
+      <div class="lt-links">
+        <a href="https://open.spotify.com/artist/0M9rZKpTm5jA2LymsptdUj" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-brands fa-spotify"></i></div>
+          <span class="lt-link-label">Listen to My Songs (Spotify)</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://open.spotify.com/show/60w883Yw7lr4lKgOM9mUOj" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-podcast"></i></div>
+          <span class="lt-link-label">My Podcast (Spotify)</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://soundon.global/bio/khairambo" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-music"></i></div>
+          <span class="lt-link-label">My Songs on SoundOn</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://vt.tiktok.com/ZSRGPYo68/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+          <span class="lt-link-label">TikTok Shop</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://www.tradingview.com/u/Khairambo/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-chart-bar"></i></div>
+          <span class="lt-link-label">My TradingView Page</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://www.khairambo.com/powerful-verses-from-the-quran/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-moon"></i></div>
+          <span class="lt-link-label">Powerful Quranic Verses</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://www.khairambo.com/muslim-calendar/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-calendar"></i></div>
+          <span class="lt-link-label">Free Muslim Calendar</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ─── SECTION: SOCIAL PROFILES ─── -->
+    <div class="lt-section">
+      <div class="lt-section-title"><i class="fa-solid fa-globe"></i> My Other Profiles</div>
+      <div class="lt-links">
+        <a href="https://direct.me/khairambo" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-address-card"></i></div>
+          <span class="lt-link-label">Direct.me Profile</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://evaunt.me/oM2IlM/KhaiRambo" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-id-badge"></i></div>
+          <span class="lt-link-label">Digital Business Card</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://the-propertyshowcase.com/mylinkstree/" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-tree"></i></div>
+          <span class="lt-link-label">All My Link Trees</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+        <a href="https://tellonym.me/Khai.Rambo" target="_blank" class="lt-link">
+          <div class="lt-link-icon"><i class="fa-solid fa-comment-dots"></i></div>
+          <span class="lt-link-label">Ask Me Anything (Tellonym)</span>
+          <i class="fa-solid fa-chevron-right lt-link-arrow"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- BACK TO HOME -->
+    <a href="index.html" class="lt-home-btn">
+      <i class="fa-solid fa-arrow-left"></i> Back to Main Website
+    </a>
+
+    <!-- DISCLAIMER -->
+    <div class="lt-disclaimer">
+      <strong style="color:rgba(255,255,255,.4);">CEA Reg No: R056070J</strong><br>
+      PropNex Realty Pte Ltd · Estate Agent Licence: L3008022J<br><br>
+      This advertisement has not been reviewed by the Council for Estate Agencies (CEA).<br>
+      Khai Rambo (R056070J) is a licensed real estate salesperson registered with PropNex Realty Pte Ltd (L3008022J).<br><br>
+      © 2026 Khai Rambo. All Rights Reserved.
+    </div>
+
+  </div><!-- end .lt-wrap -->
+
+  <!-- ── WhatsApp Form Widget ── -->
+  <div id="waWidget" class="wa-widget">
+    <button class="wa-widget-btn" id="waWidgetBtn" aria-label="Open WhatsApp Form">
+      <i class="fa-brands fa-whatsapp wa-icon-open"></i>
+      <i class="fa-solid fa-xmark wa-icon-close"></i>
+    </button>
+    <div class="wa-widget-panel" id="waWidgetPanel">
+      <div class="wa-widget-header">
+        <div class="wa-widget-header-left">
+          <div class="wa-widget-avatar">
+            <img src="images/khai-profile.jpg" alt="Khai Rambo" loading="lazy">
+            <span class="wa-online-dot"></span>
+          </div>
+          <div>
+            <div class="wa-widget-name">Khai Rambo</div>
+            <div class="wa-widget-role">Senior Associate Director · PropNex</div>
+          </div>
+        </div>
+        <i class="fa-brands fa-whatsapp wa-widget-header-icon"></i>
+      </div>
+      <div class="wa-widget-body">
+        <p class="wa-widget-intro">Hi! Fill in the form below and I'll personally get back to you on WhatsApp.</p>
+        <form id="waForm" novalidate>
+          <div class="wa-form-group">
+            <label for="waName">Name <span class="wa-req">*</span></label>
+            <input type="text" id="waName" placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="wa-form-group">
+            <label for="waEmail">Email <span class="wa-req">*</span></label>
+            <input type="email" id="waEmail" placeholder="your@email.com" autocomplete="email">
+          </div>
+          <div class="wa-form-group">
+            <label for="waInquiry">Inquiry Type <span class="wa-req">*</span></label>
+            <select id="waInquiry">
+              <option value="" disabled selected>Select inquiry type</option>
+              <option>Buying (HDB)</option>
+              <option>Selling (HDB)</option>
+              <option>Buying (Private / Condo)</option>
+              <option>Selling (Private)</option>
+              <option>HDB Upgrading</option>
+              <option>Property Investment</option>
+              <option>Rental Services</option>
+              <option>Financial Planning</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="wa-form-group">
+            <label for="waMobile">Mobile Number <span class="wa-optional">(Optional)</span></label>
+            <div class="wa-phone-wrap">
+              <span class="wa-phone-prefix">+65</span>
+              <input type="tel" id="waMobile" placeholder="XXXX XXXX" autocomplete="tel">
+            </div>
+          </div>
+          <div class="wa-form-group">
+            <label for="waSubject">Subject <span class="wa-optional">(Optional)</span></label>
+            <input type="text" id="waSubject" placeholder="e.g. Property Enquiry">
+          </div>
+          <div class="wa-form-group">
+            <label for="waMessage">Message <span class="wa-req">*</span></label>
+            <textarea id="waMessage" rows="3" placeholder="How can we help you?"></textarea>
+          </div>
+          <div class="wa-form-group">
+            <label>Attach Document <span class="wa-optional">(Optional)</span></label>
+            <label for="waFile" class="wa-file-label">
+              <i class="fa-solid fa-paperclip"></i> Click to upload (Max 5MB)
+            </label>
+            <input type="file" id="waFile" class="wa-file-input" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+            <span class="wa-file-name" id="waFileName"></span>
+          </div>
+          <button type="submit" class="wa-submit-btn">
+            <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+          </button>
+          <div class="wa-error-msg" id="waError"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
