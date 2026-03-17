@@ -263,4 +263,103 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ── Rotating sample activity notice (bottom-left) ── */
+  initSampleActivityToast();
+
+  function initSampleActivityToast() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const districts = [
+      'Jurong West',
+      'Tampines',
+      'Woodlands',
+      'Punggol',
+      'Sengkang',
+      'Bishan',
+      'Toa Payoh',
+      'Bukit Batok',
+      'Choa Chu Kang',
+      'Ang Mo Kio',
+      'Pasir Ris',
+      'Bedok'
+    ];
+    const times = [
+      'moments ago',
+      '3 minutes ago',
+      '12 minutes ago',
+      '35 minutes ago',
+      '1 hour ago',
+      '2 hours ago'
+    ];
+
+    const toast = document.createElement('aside');
+    toast.className = 'activity-toast';
+    toast.setAttribute('aria-live', 'polite');
+    toast.innerHTML = `
+      <div class="activity-toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <div class="activity-toast-body">
+        <p class="activity-toast-text"></p>
+        <div class="activity-toast-meta">
+          <span class="activity-toast-time"></span>
+          <span class="activity-toast-badge">Verified</span>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(toast);
+
+    const textEl = toast.querySelector('.activity-toast-text');
+    const timeEl = toast.querySelector('.activity-toast-time');
+
+    const showDuration = 5200;
+    const cycleDelay = 9000;
+    let timer = null;
+    let hideTimer = null;
+
+    const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+    const showToast = () => {
+      const district = pick(districts);
+      textEl.textContent = `Someone from ${district}, SG explored a FREE Discussion option.`;
+      timeEl.textContent = `${pick(times)} - verified profile`;
+
+      toast.classList.remove('hide');
+      toast.classList.add('show');
+
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => {
+        toast.classList.remove('show');
+        toast.classList.add('hide');
+      }, showDuration);
+    };
+
+    const startCycle = () => {
+      showToast();
+      if (timer) clearInterval(timer);
+      timer = setInterval(showToast, cycleDelay);
+    };
+
+    const stopCycle = () => {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+      if (hideTimer) {
+        clearTimeout(hideTimer);
+        hideTimer = null;
+      }
+      toast.classList.remove('show');
+      toast.classList.remove('hide');
+    };
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopCycle();
+      } else {
+        startCycle();
+      }
+    });
+
+    startCycle();
+  }
+
 });
